@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101827">
+    <meta name="description" content="키보드로도 사용할 수 있는 간단한 계산기">
+    <title>계산기 · LaunchDock</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="calculator" aria-label="계산기">
+        <header class="header">
+          <div class="mark" aria-hidden="true">∑</div>
+          <div>
+            <p class="eyebrow">LaunchDock demo</p>
+            <h1>계산기</h1>
+          </div>
+        </header>
+
+        <div class="screen" aria-live="polite" aria-atomic="true">
+          <div id="expression" class="expression" aria-label="계산식">&nbsp;</div>
+          <output id="display" class="display" aria-label="계산 결과">0</output>
+        </div>
+
+        <div class="keys" aria-label="계산기 버튼">
+          <button type="button" class="utility" data-key="clear" aria-label="모두 지우기">AC</button>
+          <button type="button" class="utility" data-key="sign" aria-label="부호 바꾸기">±</button>
+          <button type="button" class="utility" data-key="percent" aria-label="백분율">%</button>
+          <button type="button" class="operator" data-key="/" aria-label="나누기">÷</button>
+
+          <button type="button" data-key="7">7</button>
+          <button type="button" data-key="8">8</button>
+          <button type="button" data-key="9">9</button>
+          <button type="button" class="operator" data-key="*" aria-label="곱하기">×</button>
+
+          <button type="button" data-key="4">4</button>
+          <button type="button" data-key="5">5</button>
+          <button type="button" data-key="6">6</button>
+          <button type="button" class="operator" data-key="-" aria-label="빼기">−</button>
+
+          <button type="button" data-key="1">1</button>
+          <button type="button" data-key="2">2</button>
+          <button type="button" data-key="3">3</button>
+          <button type="button" class="operator" data-key="+" aria-label="더하기">+</button>
+
+          <button type="button" class="utility" data-key="backspace" aria-label="한 자리 지우기">⌫</button>
+          <button type="button" data-key="0">0</button>
+          <button type="button" data-key="." aria-label="소수점">.</button>
+          <button type="button" class="equals" data-key="=" aria-label="계산하기">=</button>
+        </div>
+        <p class="hint">키보드의 숫자, 사칙연산, Enter, Backspace, Esc도 사용할 수 있습니다.</p>
+      </section>
+    </main>
+  </body>
+</html>
